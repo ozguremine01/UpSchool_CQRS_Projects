@@ -10,5 +10,6 @@ namespace UpSchool_CQRS_Projects.DAL.Context
             optionsBuilder.UseSqlServer("server=DESKTOP-H7B28ES;database=DBCQRS; integrated security=true");
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

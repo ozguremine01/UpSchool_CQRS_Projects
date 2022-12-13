@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using UpSchool_CQRS_Projects.CQRS.Handlers.ProductHandlers;
+using UpSchool_CQRS_Projects.CQRS.Handlers.SudentHandlers;
 using UpSchool_CQRS_Projects.DAL.Context;
 
 namespace UpSchool_CQRS_Projects
@@ -32,7 +33,11 @@ namespace UpSchool_CQRS_Projects
             services.AddScoped<GetProductHumanResourceByIDQueryHandler>();
             services.AddScoped<GetProductAccounterByIDQueryHandler>();
             services.AddScoped<CreateProductCommandQueryHandler>();
-
+            services.AddScoped<CreateStudentCommandHandler>();
+            services.AddScoped<GetAllStudentQueryHandler>();
+            services.AddScoped<RemoveStudentCommandHandler>();
+            services.AddScoped<GetStudentByIDQueryHandler>();
+            services.AddScoped<UpdateStudentCommandHandler>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
