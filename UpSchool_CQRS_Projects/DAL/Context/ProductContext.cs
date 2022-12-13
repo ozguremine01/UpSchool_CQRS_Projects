@@ -7,7 +7,7 @@ namespace UpSchool_CQRS_Projects.DAL.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-H7B28ES;database=DBCQRS; integrated security=true");
+            optionsBuilder.UseSqlServer("server=***********; integrated security=true");
         }
         public DbSet<Product> Products { get; set; }
         public DbSet<Student> Students { get; set; }
