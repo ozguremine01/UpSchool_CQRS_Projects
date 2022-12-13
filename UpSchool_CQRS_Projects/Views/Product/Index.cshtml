@@ -1,0 +1,45 @@
+﻿@model List<GetProductAccounterQueryResult>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+<h1>Muhasebeci Paneli</h1>
+
+<div class="container">
+    <h2>Muhasebeci Paneli</h2>
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Ürün Adı</th>
+            <th>Marka</th>
+            <th>Stok Sayısı</th>
+            <th>Detaylar</th>
+            <th>Detaylar IK</th>
+            <th>Detaylar Muhasebe</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {       
+        <tr>
+               <td>@item.ProductID</td>
+               <td>@item.Name</td>
+               <td>@item.Brand</td>
+               <td>@item.Stock</td>
+                <td><a href="#" class="btn btn-outline-dark">Detaylar</a></td>
+                <td><a href="/Product/GetHumanResourceIndex/@item.ProductID" class="btn btn-outline-dark">Detaylar IK</a></td>
+                <td><a href="/Product/AccounterIndexByID/@item.ProductID" class="btn btn-outline-dark">Detaylar Muhasebe</a></td>
+                <td><a href="#" class="btn btn-outline-danger">Sil</a></td>
+                <td><a href="#" class="btn btn-outline-info">Güncelle</a></td>
+           </tr>
+       }
+    </table>
+    <br />
+    <a href="#" class="btn btn-outline-primary">Yeni Kayıt Girişi</a>
+
+</div>
+
+
