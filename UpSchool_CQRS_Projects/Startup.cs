@@ -1,3 +1,4 @@
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -38,6 +39,8 @@ namespace UpSchool_CQRS_Projects
             services.AddScoped<RemoveStudentCommandHandler>();
             services.AddScoped<GetStudentByIDQueryHandler>();
             services.AddScoped<UpdateStudentCommandHandler>();
+
+            services.AddMediatR(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
