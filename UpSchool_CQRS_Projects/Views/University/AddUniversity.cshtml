@@ -1,0 +1,30 @@
+﻿@model CreateUniversityCommand
+@{
+    ViewData["Title"] = "AddUniversity";
+}
+
+<link href="c:\users\pc\source\repos\upschool_cqrs_projects\upschool_cqrs_projects\wwwroot\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+<h1>AddStudent</h1>
+<!--12.12.2022 tarihli ders-->
+<!-- asp-action yönelndirilmek action ın ismi de verilebilir. Bizim burada AddSudent yazmamıza gerek yok. Başka bir actiona (Başka bir controllerdaki action ı veya aynı controllerdaki başka bir action ı tetikleyecekse bu parametre dolsurulur. )-->
+<div class="container">
+    <form method="post">
+    <br />
+    <label>Üniversite Adı: </label>
+    <input type="text" asp-for="Name" class="form-control"/>
+
+    <br />
+    <label>Üniversite Şehri: </label>
+    <input type="text" asp-for="City" class="form-control" />
+
+    <br />
+    <label>Üniversite Topluluk: </label>
+    <input type="text" asp-for="Population" class="form-control" />
+
+    <br />
+    <label>Fakülte Sayısı: </label>
+    <input type="text" asp-for="FacultyCount" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Öğrenci Ekle</button>
+    </form>
+</div>
