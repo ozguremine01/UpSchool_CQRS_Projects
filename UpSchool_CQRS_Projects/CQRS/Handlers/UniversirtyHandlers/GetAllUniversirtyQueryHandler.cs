@@ -13,7 +13,7 @@ namespace UpSchool_CQRS_Projects.CQRS.Handlers.UniversirtyHandlers
     public class GetAllUniversirtyQueryHandler : IRequestHandler<GetAllUniversityQuery,List<GetAllUniversityQueryResult>>
     {
         private readonly ProductContext _context;
-    
+
         public GetAllUniversirtyQueryHandler(ProductContext context)
         {
             _context = context;

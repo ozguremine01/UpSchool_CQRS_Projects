@@ -1,6 +1,8 @@
-﻿namespace UpSchool_CQRS_Projects.CQRS.Commands.UniversityCommands
+﻿using MediatR;
+
+namespace UpSchool_CQRS_Projects.CQRS.Commands.UniversityCommands
 {
-    public class RemoveUniversityCommand
+    public class RemoveUniversityCommand : IRequest
     {
         public RemoveUniversityCommand(int id)
         {
